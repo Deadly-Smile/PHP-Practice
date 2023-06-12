@@ -19,6 +19,69 @@
         <button type="submit">Submit</button>
     </form>
     <?php 
+
+    class Person {
+        private $name;
+        private $age;
+        private $address;
+
+        public function __construct($name, $age, $address) {
+            $this->name = $name;
+            $this->age  = $age;
+            $this->address = $address; 
+        }
+
+        public function getInfo() {
+            echo "Name : $this->name<br> Age : $this->age<br> Adress : $this->address<br>";
+        }
+
+        public function setInfo($name, $age, $address) {
+            $this->name = $name;
+            $this->age  = $age;
+            $this->address = $address; 
+        }
+    }
+
+    $ami = new Person("Anik", "23", "Mirpur-1, Dhaka-1216");
+    $ami->setInfo("Anik", "23", "Mirpur-1, Dhaka-1216");
+    $ami->getInfo();
+
+    $arekJon = new Person("Some guy", "34", "Nowhere");
+    $arekJon->getInfo();
+
+    $switchCondition = 2345;
+    switch($switchCondition) {
+        case 123:
+            echo $switchCondition;
+            break;
+        case 234:
+            echo $switchCondition;
+            break;
+        default:
+            echo "Default";
+            break;
+    }
+
+    $val = 9;
+    if($val == 1) {
+        echo "$val";
+    } else if($val == 2) {
+        echo "$val";
+    } else {
+        echo "<p>Some thing else</p>";
+    }
+
+    $val = 5;
+    while($val--) {
+        echo "$val, ";
+    } 
+
+    function my_sqrt($n) {
+        return sqrt($n);
+    }
+
+    echo my_sqrt(100);
+
     $ini = "Ki hoise?";
     echo "$ini <br>";
     
@@ -36,6 +99,7 @@
     }
     echo "<br/>";
     echo $map["Anik"];
+
     ?>
 </body>
 </html>
